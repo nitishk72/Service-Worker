@@ -10,7 +10,7 @@ self.addEventListener('fetch', function(event) {
     var updateCache = function(request) {
         return caches.open('pwa-offline').then(function(cache) {
             return fetch(request).then(function(response) {
-                return cache.put(request, response)
+                return cache.put(request, response);
             })
         })
     };
